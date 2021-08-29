@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<h2>New Post</h2>
+<form method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button type="submit" content="投稿" %}
+</form>
+{% endblock %}
